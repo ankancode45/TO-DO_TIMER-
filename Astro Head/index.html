@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Astro To-Do Timer</title>
+  <meta name="viewport" content="width=400, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="astro-container">
+      <div class="head">
+        <div class="helmet">
+          <div class="eyes">
+            <div class="eye"></div>
+            <div class="eye"></div>
+          </div>
+          <div class="mouth smile" id="astroMouth"></div>
+        </div>
+      </div>
+      <div class="astro-notification" id="astroNotification">
+        <div class="bubble-text">Good Project!!!<br>Time For Next Task</div>
+      </div>
+    </div>
+    <div class="todo-box">
+      <h2>Daily To-Do Timer</h2>
+      <form id="taskForm" autocomplete="off">
+        <input type="text" id="taskInput" maxlength="35" placeholder="Add new task..." required />
+        <div class="time-group">
+          <input type="number" id="hourInput" min="0" max="23" placeholder="hh" required>
+          <span class="colon">:</span>
+          <input type="number" id="minuteInput" min="0" max="59" placeholder="mm" required>
+          <span class="colon">:</span>
+          <input type="number" id="secondInput" min="0" max="59" placeholder="ss" required>
+        </div>
+        <button type="submit" class="add-btn">+</button>
+      </form>
+      <ul id="taskList"></ul>
+      <div class="timer-controls">
+        <span id="timerLabel">Timer:</span>
+        <span id="timer">00:00:00</span>
+        <button id="startTimer">Start</button>
+        <button id="resetTimer">Reset</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
